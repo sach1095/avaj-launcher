@@ -1,22 +1,24 @@
 NAME = AvajLauncher
-PATH = me.
 EXEC = java
 CC = javac
 FLAG = -cp
 SRCS = ./src -name "*.java"
 
-$(NAME)	:
-	find $(SRCS) > src.txt
-	mkdir -p object
-	$(CC) -d object @src.txt
+$(NAME)	: compile run
+
+compile:
+	@ find ./src -name "*.java" > src.txt
+	@ mkdir -p out
+	@ $(CC) -d out @src.txt
 
 run:
-	java -classpath object/ $(NAME) scenario.txt
+	@ $(EXEC) -classpath out src/Main.java scenario.txt
 
 clean:
-	rm -rf object
+	@ rm -rf out/*.class
+	@ rm -rf src.txt
 
 fclean: clean
-		rm -rf $(PATH)/$(NAME)
+	@ rm -rf out
 
-.PHONY: run clean fclean
+.PHONY: compile run clean fclean
