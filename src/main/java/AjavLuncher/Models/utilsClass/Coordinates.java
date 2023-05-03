@@ -1,4 +1,4 @@
-package me.sbaranes.AjavLuncher.Models.utilsClass;
+package main.java.AjavLuncher.Models.utilsClass;
 
 public class Coordinates {
 	int longitude;
