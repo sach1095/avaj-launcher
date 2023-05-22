@@ -36,5 +36,4 @@ public class AircraftFactory {
 		}
 		return null;
 	}
-	
 }

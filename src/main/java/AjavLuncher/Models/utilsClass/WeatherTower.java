@@ -1,5 +1,15 @@
 package main.java.AjavLuncher.Models.utilsClass;
 
-public class WeatherTower {
+import main.java.AjavLuncher.Models.Tower;
+
+public class WeatherTower extends Tower {
+
+    public WeatherTower() {
+        super();
+    }
+
+    public void changeWeather() {
+        this.conditionChanged();
+    }
 
 }
