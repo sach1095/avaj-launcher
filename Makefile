@@ -20,5 +20,6 @@ clean:
 
 fclean: clean
 	@ rm -rf out
+	@ rm -rf bin
 
 .PHONY: compile run clean fclean
